@@ -1,5 +1,5 @@
-%% BIONEGG 2586 - Assignment - 1 Reaching Assignment
-% Assignment done in group by Bobby Mohan and Sai Sravanthi Joshi
+%% Monkey Hand Reaching Experiment
+
 %% Loading the Data
 clc;
 close all;
@@ -143,7 +143,7 @@ hold on;
 TimeIndex=(RN(1).timeGoCuePHOTO)-(RN(1).timeGoCue);
 plot((RN(1).timeGoCuePHOTO),(Nor_hhp(TimeIndex)),'*');
 
-% COde to plot Raster
+% Code to plot Raster
 
 for itrial=1:4
     spks=(RN(1).cells(itrial).spikeTimes)';
@@ -160,21 +160,21 @@ for itrial=1:4
 end
         
 %% To plot PSTH curve
-% psth(times, binsize, fs, ntrials, triallen, varargin);
+psth(times, binsize, fs, ntrials, triallen, varargin);
 
-% spiketimes=RN(1).cells;
-% binsize=(((RN(1).timeCueOnset)-300):((RN(1).timeCueOnset)+600));
-% fs=1000;
-% ntrials=4;
-% triallen=0;
-% varargin=0;
-% psth(spiketimes, binsize, fs, ntrials, triallen, varargin);
+spiketimes=RN(1).cells;
+binsize=(((RN(1).timeCueOnset)-300):((RN(1).timeCueOnset)+600));
+fs=1000;
+ntrials=4;
+triallen=0;
+varargin=0;
+psth(spiketimes, binsize, fs, ntrials, triallen, varargin);
 
-% TIMES - spike times (samples)
-% BINSIZE - binwidth (ms)
-% FS - sampling rate (hz)
-% NTRIALS - number of trials
-% TRIALLEN - length of a trial (samples)
+TIMES - spike times (samples)
+BINSIZE - binwidth (ms)
+FS - sampling rate (hz)
+NTRIALS - number of trials
+TRIALLEN - length of a trial (samples)
 
 
 
